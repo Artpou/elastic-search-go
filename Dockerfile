@@ -1,9 +1,11 @@
-FROM golang:1.16-buster
+FROM golang:1.16
 
-COPY main.go .
+WORKDIR /go/src/app
+COPY . .
 
-RUN go build main.go
+RUN go get -d -v ./...
+RUN go install -v ./...
 
 EXPOSE 8080
 
-CMD ["./main"]
+CMD ["app"]
