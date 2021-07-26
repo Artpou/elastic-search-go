@@ -10,7 +10,7 @@ import (
 )
 
 func HandleRequests() {
-	log.Println("Starting development server at http://127.0.0.1:10000/")
+	log.Println("Starting development server at http://127.0.0.1:8080/")
 	router := mux.NewRouter().StrictSlash(true)
 	es, err := elasticsearch.NewDefaultClient()
 
@@ -31,7 +31,7 @@ func HandleRequests() {
 	fs := http.FileServer(http.Dir("static/"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	log.Fatal(http.ListenAndServe(":10000", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func HomeRoute(w http.ResponseWriter, r *http.Request) {
