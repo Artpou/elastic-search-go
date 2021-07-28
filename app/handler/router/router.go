@@ -39,7 +39,7 @@ func HandleRequests() {
 	fs := http.FileServer(http.Dir("static/"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	log.Fatal(http.ListenAndServe("8080", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 //LOGIN
