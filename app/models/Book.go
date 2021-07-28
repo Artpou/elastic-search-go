@@ -1,14 +1,11 @@
 package models
 
 import (
-	"time"
+	_ "github.com/jinzhu/gorm"
 )
 
 type Book struct {
-	ID          uint
-	Author      Author
-	Title       string
-	Preface     string
-	Category    string
-	ReleaseDate time.Time
+	Title  string `gorm:"not null;size:500"`
+	Author string `gorm:"not null;size:500"`
+	Year   string `gorm:"not null;size:20"`
 }
