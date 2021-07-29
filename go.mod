@@ -1,4 +1,4 @@
-module github.com/Artpou/elastic-search-go
+module github.com/Artpou/elastic-search-go/app
 
 require (
 	github.com/elastic/go-elasticsearch/v7 v7.13.1

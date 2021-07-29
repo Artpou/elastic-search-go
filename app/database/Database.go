@@ -3,7 +3,8 @@ package database
 import (
 	"log"
 
-	"github.com/Artpou/elastic-search-go/models"
+	"github.com/Artpou/elastic-search-go/app/models"
+	_ "github.com/elastic/go-elasticsearch/v7"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
