@@ -57,17 +57,12 @@ If you use postman, you must complete the request in json in body>raw
 
 ```json
 {
-    { "ID":1,
-    "author":"Isabelle Allende",
-    "title": "La casa de los espíritus",
-    "year": "2017"
-    },
-    {
-    "ID":1,
-    "author":"Isabelle Allende",
-    "title": "La casa de los espíritus",
-    "year": "2017"
-    },
+   {"author":"Isabel Allende",
+   "title":"La casa de los espíritus",
+   "year":1982},
+   {"author":"Victor Hugo",
+   "title":"Les miserables",
+   "year":1862}
 }
 ```
 
