@@ -19,9 +19,6 @@ func GetJson(w http.ResponseWriter, url string, target interface{}) error {
 	return nil
 }
 
-func Respondss(w http.ResponseWriter, data map[string]interface{}) {
-}
-
 func RespondJSON(w http.ResponseWriter, status int, payload interface{}) {
 	response, err := json.Marshal(payload)
 	if err != nil {
@@ -32,4 +29,8 @@ func RespondJSON(w http.ResponseWriter, status int, payload interface{}) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
 	w.Write([]byte(response))
+}
+
+func RespondError(w http.ResponseWriter, code int, message string) {
+	RespondJSON(w, code, map[string]string{"error": message})
 }

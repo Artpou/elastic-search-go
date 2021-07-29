@@ -4,14 +4,18 @@ import (
 	"fmt"
 )
 
-func FieldNotFound(field string) string {
+func FieldNotFoundError(field string) string {
 	return fmt.Sprintf(`This %s cannot be found`, field)
 }
 
-func FieldRequired(field string) string {
+func FieldRequiredError(field string) string {
 	return fmt.Sprintf(`The field '%s' is missing`, field)
 }
 
-func FieldForbidden(field string) string {
-	return fmt.Sprintf(`Youd don't have the write to modify this %s`, field)
+func FieldForbiddenError(field string) string {
+	return fmt.Sprintf(`You don't have the right to modify this %s`, field)
+}
+
+func BodyParsingError() string {
+	return "Error parsing response body"
 }

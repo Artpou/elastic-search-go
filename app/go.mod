@@ -12,6 +12,7 @@ require (
 	github.com/jinzhu/gorm v1.9.16
 	github.com/mdempsky/maligned v0.0.0-20210215075342-f0178ee82032 // indirect
 	github.com/mibk/dupl v1.0.0 // indirect
+	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/tsenart/deadcode v0.0.0-20160724212837-210d2dc333e9 // indirect
 	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2

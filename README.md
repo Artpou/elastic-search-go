@@ -22,16 +22,8 @@ go install -v ./...
 
 * To start the API, use the **go run main.go** command.
 * You can execute all requests in non-user-restricted endpoints without a token.
-* To create an account, use the [Create User](/docs/user_add.md) route.
-* Then, use the [Login request](/docs/login.md) route to get a JWT Token.
-* You can then use this token as "Bearer Token" Authentication to have access to user-restricted routes, such as article creation and edition.
-* Always use raw JSON data for POST and PUT requests instead of form data.
-* Admin access :
-```json
-{
-    "Username" : "admin",
-    "Password" : "admin"
-}
+* To find a book, use the route /api/book.
+
 
 # DOCUMENTATION
 
@@ -65,18 +57,17 @@ If you use postman, you must complete the request in json in body>raw
 
 ```json
 {
+    { "ID":1,
+    "author":"Isabelle Allende",
+    "title": "La casa de los espíritus",
+    "year": "2017"
+    },
+    {
+    "ID":1,
+    "author":"Isabelle Allende",
+    "title": "La casa de los espíritus",
+    "year": "2017"
+    },
 }
 ```
 
-## Error Response
-
-**Condition** : If 'username' and 'password' combination is wrong.
-
-**Code** : `400 BAD REQUEST`
-
-**Content** :
-
-```json
-{ 
-}
-```
