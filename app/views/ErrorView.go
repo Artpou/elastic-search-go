@@ -12,10 +12,6 @@ func FieldRequiredError(field string) string {
 	return fmt.Sprintf(`The field '%s' is missing`, field)
 }
 
-func FieldForbiddenError(field string) string {
-	return fmt.Sprintf(`You don't have the right to modify this %s`, field)
-}
-
 func BodyParsingError() string {
-	return "Error parsing response body"
+	return fmt.Sprintf("Error parsing response body")
 }
